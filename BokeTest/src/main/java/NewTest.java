@@ -38,6 +38,7 @@ public class NewTest {
 		//重置输入法为系统默认
 		caps.setCapability("resetKeyboard", true);
 		//安装时不对apk进行重签名，设置没有必要，否则有的apk在重签名之后无法正常使用
+		caps.setCapability("noSign", true);
 		driver=new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),caps);
 	}
 @Test
